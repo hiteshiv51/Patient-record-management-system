@@ -1,0 +1,151 @@
+/* ===== GENERAL STYLES ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #bbcf8d, #e8eaf6);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #7b904b;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #7b904b;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* ===== CARD CONTAINERS ===== */
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.card.hidden { display: none; }
+
+h2 {
+  text-align: center;
+  color: #7b904b;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background-color: #002400;
+  color: white;
+}
+.btn-primary:hover { background-color: yellowgreen; }
+
+.btn-secondary {
+  background-color: #002400;
+  color: white;
+}
+.btn-secondary:hover { background-color: #002400; }
+
+.btn-danger {
+  background-color: tomato;
+  color: white;
+}
+.btn-danger:hover { background-color: tomato; }
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ===== FORM STYLES ===== */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #002400;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+.form-inline input {
+  width: calc(25% - 10px);
+  margin: 5px;
+}
+
+/* ===== TABLE STYLES ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #002400;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td button {
+  margin: 3px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
