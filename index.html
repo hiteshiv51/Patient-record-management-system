@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Record Management System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🏥 MEDITRACK</h1>
+  </header>
+
+  <!-- Login Section -->
+  <section id="login-section" class="card active">
+    <h2>🔐 Login</h2>
+    <div class="form-group">
+      <label>Select Role</label>
+        <select id="user-role">
+      <option value="">-- Select Role --</option>
+      <option value="admin">Admin</option>
+      <option value="doctor">Doctor</option>
+      <option value="patient">Patient</option>
+    </select>
+
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+       <small id="password-hint" style="color: gray;"></small> 
+    </div>
+    <button id="login-btn" class="btn-primary">Login</button>
+  </section>
+
+  <!-- Admin Dashboard -->
+  <section id="admin-dashboard" class="card hidden">
+    <h2>👑 Admin Dashboard</h2>
+    <p>Manage users, assign roles, and maintain data security.</p>
+    <div class="btn-group">
+      <button class="btn-secondary">Manage Users</button>
+      <button class="btn-secondary">Assign Roles</button>
+    </div>
+    <button class="btn-danger" onclick="logout()">Logout</button>
+  </section>
+
+  <!-- Doctor Dashboard -->
+  <section id="doctor-dashboard" class="card hidden">
+    <h2>🩺 Doctor Dashboard</h2>
+    <p>Access patient records and add prescriptions.</p>
+    <div class="btn-group">
+      <button class="btn-primary" onclick="showSection('patient-section')">View Patients</button>
+    </div>
+    <button class="btn-danger" onclick="logout()">Logout</button>
+  </section>
+
+  <!-- Patient Section -->
+  <section id="patient-section" class="card hidden">
+    <h2>👤 Patient Records</h2>
+    <form id="patient-form" class="form-inline">
+      <input type="text" id="pname" placeholder="Name" required>
+      <input type="number" id="page" placeholder="Age" required>
+      <input type="text" id="pgender" placeholder="Gender" required>
+      <input type="text" id="pcontact" placeholder="Contact" required>
+      <button type="submit" class="btn-primary">Add Patient</button>
+    </form>
+
+    <div class="table-container">
+      <table id="patient-table">
+        <thead>
+          <tr>
+            <th>Name</th><th>Age</th><th>Gender</th><th>Contact</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="btn-danger" onclick="logout()">Logout</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Patient Record Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
